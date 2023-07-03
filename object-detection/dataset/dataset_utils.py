@@ -52,6 +52,7 @@ class ToTensor(object):
 def get_transform(train):
     # No data augmentation is applied.
     transforms = []
+    transforms.append(RandomHorizontalFlip(0.2)
     transforms.append(ToTensor())
     if train:
         pass # possible data augmentations
